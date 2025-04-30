@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Multiplicación de Números Complejos </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .left {
+            flex: 1;
+            border-right: 2px solid #ccc;
+        }
+
+        .right {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            padding: 5px;
+            background-color: #f0f4f8;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox-grid label {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 6px 8px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .checkbox-grid label:hover {
+            background-color: #e6f0ff;
+        }
+
+        .hoja {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .hoja iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Vista del app de Geogebra realizado -->
+    <div class="left">
+        <iframe
+            src="https://www.geogebra.org/material/iframe/id/ezsapapf/width/750/height/700/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false"
+            width="750" height="700" allowfullscreen style="border: 1px solid #e4e4e4; border-radius: 4px;"
+            frameborder="0">
+        </iframe>
+
+    </div>
+
+    <!-- Aquí se mostrará la información referente al tema seleccionado-->
+    <div class="right">
+
+        <!-- Checkboxes para que el usuario lea el apartado seleccionado-->
+        <div class="checkbox-grid">
+            <label><input type="checkbox" onclick="toggle('caratula')"> Carátula </label>
+            <label><input type="checkbox" onclick="toggle('intro')"> Introducción </label>
+            <label><input type="checkbox" onclick="toggle('objetivos')"> Objetivos </label>
+            <label><input type="checkbox" onclick="toggle('marco')"> Marco Teórico </label>
+            <label><input type="checkbox" onclick="toggle('metodologia')"> Metodología </label>
+            <label><input type="checkbox" onclick="toggle('desarrollo')"> Desarrollo </label>
+            <label><input type="checkbox" onclick="toggle('resultados')"> Resultados </label>
+            <label><input type="checkbox" onclick="toggle('analisis')"> Análisis de Resultados</label>
+            <label><input type="checkbox" onclick="toggle('conclusiones')"> Conclusiones </label>
+            <label><input type="checkbox" onclick="toggle('reflexiones')"> Reflexiones </label>
+            <label><input type="checkbox" onclick="toggle('referencias')"> Referencias </label>
+        </div>
+
+        <!-- Muestran la información del apartado seleccionado-->
+        <div id="caratula" class="hoja">
+            <iframe src="https://drive.google.com/file/d/10h2c9BgTmqYSfP9VU6fJtaFwLTh7qzYpMBLxlpuUQRU/preview"></iframe>
+        </div>
+
+        <div id="intro" class="hoja">
+            <iframe src="https://drive.google.com/file/d/10YmnQoY_oCCmx72Ch7ZM-7DLG1Z_BU5zqS-0weXwm1I/preview"></iframe>
+        </div>
+
+        <div id="objetivos" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1Iwj35ujFbYzFCGSEqR-K6Ayf7O_mpDHefzwObMi0a5E/preview"></iframe>
+        </div>
+
+        <div id="marco" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1rHQC7B-do9Ds7agkERXRrkdkwIzkmdMIratpLkz-YEA/preview"></iframe>
+        </div>
+
+        <div id="metodologia" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1J-kgB7okXklwAbXWOlNRxs8u1l23P1TZqN7CxNdaXP0/preview"></iframe>
+        </div>
+
+        <div id="desarrollo" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1kn9IaYztbotzNhtgrlq2N5fD8ikdVkSjZZLXYjdRQEU/preview"></iframe>
+        </div>
+
+        <div id="resultados" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1cagIWc_XTiToapgmHogxnXsF4-_XroFXxOdsomyjwvY/preview"></iframe>
+        </div>
+
+        <div id="analisis" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1AwiHbL1K-4CdvnCZLjFAiOXPV4Lg4RP7bMZvWC4oiE4/preview"></iframe>
+        </div>
+
+        <div id="conclusiones" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1UimnVLgplm9yP1mL6FmfexYoNfhilIgIMfODgWLZXlo/preview"></iframe>
+        </div>
+
+        <div id="reflexiones" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1fmtXYOkuwLnnQ7W_aBAXKNWsm9YCQXgvOkODjytd0n4/preview"></iframe>
+        </div>
+
+        <div id="referencias" class="hoja">
+            <iframe src="https://drive.google.com/file/d/1blx46hX6sjqZQg_C1F2NK57bK3u-qpdXBCOo_Q5ahCQ/preview"></iframe>
+        </div>
+
+    </div>
+
+    <script>
+        function toggle(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'none' || el.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>
